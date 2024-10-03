@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş Sayfası - Akif's Servers</title>
+    <link rel="stylesheet" href="dogrulama/style.css">
+    <!-- hCaptcha API -->
+    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Siteye Giriş</h2>
+        <p>Kodu doğru girerek siteye girebilirsiniz.</p>
+        <form id="codeForm">
+            <label for="code">Ekibimiz tarafından size verilen kodu giriniz?</label>
+            <input type="text" id="code" placeholder="Cevabınızı girin">
+
+            <!-- hCaptcha widget - Gönder butonunun hemen üstünde -->
+            <div class="h-captcha" data-sitekey="55d4a52a-31c8-4f96-88a6-c508cd0278ee"></div>
+
+            <button type="submit">Gönder</button>
+        </form>
+        <p id="errorMessage" class="hidden">Yanlış cevap! Tekrar deneyin.</p>
+    </div>
+
+    <script src="dogrulama/script.js"></script>
+</body>
+</html>

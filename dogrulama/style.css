@@ -1,0 +1,113 @@
+/* Genel stil */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+label {
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#code {
+    margin-bottom: 10px;
+}
+
+#errorMessage {
+    color: red;
+    text-align: center;
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+/* hCaptcha stili */
+.h-captcha {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* hCaptcha'nın mobil için ölçeklenmesi */
+@media screen and (max-width: 480px) {
+    .h-captcha iframe {
+        transform: scale(0.85);
+        transform-origin: 0 0;
+    }
+
+    /* Formu dar ekranlar için ayarla */
+    .container {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    label, p {
+        font-size: 14px;
+    }
+
+    input, button {
+        font-size: 14px;
+    }
+}
